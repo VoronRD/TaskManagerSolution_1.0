@@ -1,0 +1,51 @@
+﻿<UserControl x:Class="TaskManager.TasksModule.Views.TaskEditView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:TaskManager.TasksModule.Views"
+             mc:Ignorable="d">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Vertical">
+            <TextBlock Text="Название задачи:" FontWeight="Bold"/>
+            <TextBox Text="{Binding Task.Title, UpdateSourceTrigger=PropertyChanged}" />
+
+            <TextBlock Text="Описание:" FontWeight="Bold"/>
+            <TextBox Text="{Binding Task.Description, UpdateSourceTrigger=PropertyChanged}" AcceptsReturn="True" Height="100"/>
+
+            <TextBlock Text="Дата создания:" FontWeight="Bold"/>
+            <DatePicker SelectedDate="{Binding Task.CreatedDate, Mode=TwoWay}" />
+
+            <TextBlock Text="Дедлайн:" FontWeight="Bold"/>
+            <DatePicker SelectedDate="{Binding Task.Deadline, Mode=TwoWay}" />
+
+            <TextBlock Text="Приоритет:" FontWeight="Bold"/>
+            <ComboBox ItemsSource="{Binding Priorities}"
+                      SelectedItem="{Binding Task.Priority, Mode=TwoWay}" />
+
+            <TextBlock Text="Статус:" FontWeight="Bold"/>
+            <ComboBox ItemsSource="{Binding Statuses}"
+                      SelectedItem="{Binding Task.Status, Mode=TwoWay}" />
+
+            <TextBlock Text="Повторение:" FontWeight="Bold"/>
+            <ComboBox ItemsSource="{Binding RepeatIntervals}" 
+                      SelectedItem="{Binding Task.Repeat, Mode=TwoWay}" />
+
+            <TextBlock Text="Повторять до:" FontWeight="Bold"/>
+            <DatePicker SelectedDate="{Binding Task.RepeatUntil, Mode=TwoWay}" />
+        </StackPanel>
+
+        <Button Grid.Row="1"
+                Content="Сохранить"
+                Command="{Binding SaveCommand}"
+                HorizontalAlignment="Right"
+                Margin="0,20,0,0"
+                Width="120"
+                Height="35"/>
+    </Grid>
+</UserControl>
