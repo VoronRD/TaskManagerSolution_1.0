@@ -16,9 +16,8 @@ namespace TaskManager.Calendar
             var regionManager = containerProvider.Resolve<IRegionManager>();
             regionManager.RequestNavigate("MainRegion", "CalendarView");
 
-            // Предзагрузка данных
             var dataService = containerProvider.Resolve<IDataService>();
-            dataService.LoadTasks(); // Инициализация данных
+            dataService.LoadTasks();
         }
 
         public void RegisterTypes(IContainerRegistry containerRegistry)
