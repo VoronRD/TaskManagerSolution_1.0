@@ -16,8 +16,17 @@ namespace TaskManager.Core.Models
         public List<Tags> Tags { get; set; } = new();
         public Priority Priority { get; set; }
         public DateTime CreatedDate { get; set; } = DateTime.Now;
-        public DateTime Deadline { get; set; }
+        public DateTime Deadline { get; set; } = DateTime.Now;
         public RepeatInterval Repeat { get; set; }
-        public DateTime? RepeatUntil { get; set; } // ← добавлено
+        public DateTime? RepeatUntil { get; set; }
+
+        public bool IsDeadlineApproaching
+        {
+            get
+            {
+                return (Deadline - DateTime.Now).TotalDays <= 1 && Status != TasksStatus.Completed;
+            }
+        }
+
     }
 }

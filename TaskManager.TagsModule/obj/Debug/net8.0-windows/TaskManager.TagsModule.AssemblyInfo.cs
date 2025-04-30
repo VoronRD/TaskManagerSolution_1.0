@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TaskManager.TagsModule")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8dd28c3b5d8703acb8a9f7cedbcea491416d0e5b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+923577813016c3ccbc1f1359b7a4667c016d0a4a")]
 [assembly: System.Reflection.AssemblyProductAttribute("TaskManager.TagsModule")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TaskManager.TagsModule")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
