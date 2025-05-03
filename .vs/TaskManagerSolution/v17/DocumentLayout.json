@@ -3,6 +3,62 @@
   "WorkspaceRootPath": "C:\\Users\\AGANETHED\\Desktop\\TaskManagerSolution_1.0\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{3C8514AC-CD04-4AEA-B580-32674A53FA4F}|TaskManager.Infrastructure\\TaskManager.Infrastructure.csproj|c:\\users\\aganethed\\desktop\\taskmanagersolution_1.0\\taskmanager.infrastructure\\services\\idataservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C8514AC-CD04-4AEA-B580-32674A53FA4F}|TaskManager.Infrastructure\\TaskManager.Infrastructure.csproj|solutionrelative:taskmanager.infrastructure\\services\\idataservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C8514AC-CD04-4AEA-B580-32674A53FA4F}|TaskManager.Infrastructure\\TaskManager.Infrastructure.csproj|c:\\users\\aganethed\\desktop\\taskmanagersolution_1.0\\taskmanager.infrastructure\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{3C8514AC-CD04-4AEA-B580-32674A53FA4F}|TaskManager.Infrastructure\\TaskManager.Infrastructure.csproj|solutionrelative:taskmanager.infrastructure\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C8514AC-CD04-4AEA-B580-32674A53FA4F}|TaskManager.Infrastructure\\TaskManager.Infrastructure.csproj|c:\\users\\aganethed\\desktop\\taskmanagersolution_1.0\\taskmanager.infrastructure\\services\\settingsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C8514AC-CD04-4AEA-B580-32674A53FA4F}|TaskManager.Infrastructure\\TaskManager.Infrastructure.csproj|solutionrelative:taskmanager.infrastructure\\services\\settingsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C8514AC-CD04-4AEA-B580-32674A53FA4F}|TaskManager.Infrastructure\\TaskManager.Infrastructure.csproj|c:\\users\\aganethed\\desktop\\taskmanagersolution_1.0\\taskmanager.infrastructure\\services\\notificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C8514AC-CD04-4AEA-B580-32674A53FA4F}|TaskManager.Infrastructure\\TaskManager.Infrastructure.csproj|solutionrelative:taskmanager.infrastructure\\services\\notificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C8514AC-CD04-4AEA-B580-32674A53FA4F}|TaskManager.Infrastructure\\TaskManager.Infrastructure.csproj|c:\\users\\aganethed\\desktop\\taskmanagersolution_1.0\\taskmanager.infrastructure\\events\\taskdeletedevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C8514AC-CD04-4AEA-B580-32674A53FA4F}|TaskManager.Infrastructure\\TaskManager.Infrastructure.csproj|solutionrelative:taskmanager.infrastructure\\events\\taskdeletedevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C8514AC-CD04-4AEA-B580-32674A53FA4F}|TaskManager.Infrastructure\\TaskManager.Infrastructure.csproj|c:\\users\\aganethed\\desktop\\taskmanagersolution_1.0\\taskmanager.infrastructure\\events\\tagschangedevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C8514AC-CD04-4AEA-B580-32674A53FA4F}|TaskManager.Infrastructure\\TaskManager.Infrastructure.csproj|solutionrelative:taskmanager.infrastructure\\events\\tagschangedevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C8514AC-CD04-4AEA-B580-32674A53FA4F}|TaskManager.Infrastructure\\TaskManager.Infrastructure.csproj|c:\\users\\aganethed\\desktop\\taskmanagersolution_1.0\\taskmanager.infrastructure\\events\\taskchangedevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C8514AC-CD04-4AEA-B580-32674A53FA4F}|TaskManager.Infrastructure\\TaskManager.Infrastructure.csproj|solutionrelative:taskmanager.infrastructure\\events\\taskchangedevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C8514AC-CD04-4AEA-B580-32674A53FA4F}|TaskManager.Infrastructure\\TaskManager.Infrastructure.csproj|c:\\users\\aganethed\\desktop\\taskmanagersolution_1.0\\taskmanager.infrastructure\\converters\\taskconverters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C8514AC-CD04-4AEA-B580-32674A53FA4F}|TaskManager.Infrastructure\\TaskManager.Infrastructure.csproj|solutionrelative:taskmanager.infrastructure\\converters\\taskconverters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C8514AC-CD04-4AEA-B580-32674A53FA4F}|TaskManager.Infrastructure\\TaskManager.Infrastructure.csproj|c:\\users\\aganethed\\desktop\\taskmanagersolution_1.0\\taskmanager.infrastructure\\converters\\selectedtasktoisselectedconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C8514AC-CD04-4AEA-B580-32674A53FA4F}|TaskManager.Infrastructure\\TaskManager.Infrastructure.csproj|solutionrelative:taskmanager.infrastructure\\converters\\selectedtasktoisselectedconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C8514AC-CD04-4AEA-B580-32674A53FA4F}|TaskManager.Infrastructure\\TaskManager.Infrastructure.csproj|c:\\users\\aganethed\\desktop\\taskmanagersolution_1.0\\taskmanager.infrastructure\\converters\\datehastaskconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C8514AC-CD04-4AEA-B580-32674A53FA4F}|TaskManager.Infrastructure\\TaskManager.Infrastructure.csproj|solutionrelative:taskmanager.infrastructure\\converters\\datehastaskconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C8514AC-CD04-4AEA-B580-32674A53FA4F}|TaskManager.Infrastructure\\TaskManager.Infrastructure.csproj|c:\\users\\aganethed\\desktop\\taskmanagersolution_1.0\\taskmanager.infrastructure\\converters\\colortobrushconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C8514AC-CD04-4AEA-B580-32674A53FA4F}|TaskManager.Infrastructure\\TaskManager.Infrastructure.csproj|solutionrelative:taskmanager.infrastructure\\converters\\colortobrushconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C8514AC-CD04-4AEA-B580-32674A53FA4F}|TaskManager.Infrastructure\\TaskManager.Infrastructure.csproj|c:\\users\\aganethed\\desktop\\taskmanagersolution_1.0\\taskmanager.infrastructure\\behaviors\\listboxselecteditemsbehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C8514AC-CD04-4AEA-B580-32674A53FA4F}|TaskManager.Infrastructure\\TaskManager.Infrastructure.csproj|solutionrelative:taskmanager.infrastructure\\behaviors\\listboxselecteditemsbehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C8514AC-CD04-4AEA-B580-32674A53FA4F}|TaskManager.Infrastructure\\TaskManager.Infrastructure.csproj|c:\\users\\aganethed\\desktop\\taskmanagersolution_1.0\\taskmanager.infrastructure\\properties\\settings.settings||{6D2695F9-5365-4A78-89ED-F205C045BFE6}",
+      "RelativeMoniker": "D:0:0:{3C8514AC-CD04-4AEA-B580-32674A53FA4F}|TaskManager.Infrastructure\\TaskManager.Infrastructure.csproj|solutionrelative:taskmanager.infrastructure\\properties\\settings.settings||{6D2695F9-5365-4A78-89ED-F205C045BFE6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C8514AC-CD04-4AEA-B580-32674A53FA4F}|TaskManager.Infrastructure\\TaskManager.Infrastructure.csproj|c:\\users\\aganethed\\desktop\\taskmanagersolution_1.0\\taskmanager.infrastructure\\taskmanager.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{3C8514AC-CD04-4AEA-B580-32674A53FA4F}|TaskManager.Infrastructure\\TaskManager.Infrastructure.csproj|solutionrelative:taskmanager.infrastructure\\taskmanager.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{AFCBFA61-B6DE-4759-A4FC-095EE290E2B5}|TaskManager.Core\\TaskManager.Core.csproj|c:\\users\\aganethed\\desktop\\taskmanagersolution_1.0\\taskmanager.core\\models\\tasks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AFCBFA61-B6DE-4759-A4FC-095EE290E2B5}|TaskManager.Core\\TaskManager.Core.csproj|solutionrelative:taskmanager.core\\models\\tasks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -39,10 +95,6 @@
       "RelativeMoniker": "D:0:0:{FE0B7280-5962-4FCE-902D-38BD2B582372}|TaskManager.Calendar\\TaskManager.Calendar.csproj|solutionrelative:taskmanager.calendar\\view\\calendarview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3C8514AC-CD04-4AEA-B580-32674A53FA4F}|TaskManager.Infrastructure\\TaskManager.Infrastructure.csproj|c:\\users\\aganethed\\desktop\\taskmanagersolution_1.0\\taskmanager.infrastructure\\events\\taskdeletedevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3C8514AC-CD04-4AEA-B580-32674A53FA4F}|TaskManager.Infrastructure\\TaskManager.Infrastructure.csproj|solutionrelative:taskmanager.infrastructure\\events\\taskdeletedevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3C8514AC-CD04-4AEA-B580-32674A53FA4F}|TaskManager.Infrastructure\\TaskManager.Infrastructure.csproj|c:\\users\\aganethed\\desktop\\taskmanagersolution_1.0\\taskmanager.infrastructure\\services\\jsondataservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3C8514AC-CD04-4AEA-B580-32674A53FA4F}|TaskManager.Infrastructure\\TaskManager.Infrastructure.csproj|solutionrelative:taskmanager.infrastructure\\services\\jsondataservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -71,19 +123,200 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "IDataService.cs",
+              "DocumentMoniker": "C:\\Users\\AGANETHED\\Desktop\\TaskManagerSolution_1.0\\TaskManager.Infrastructure\\Services\\IDataService.cs",
+              "RelativeDocumentMoniker": "TaskManager.Infrastructure\\Services\\IDataService.cs",
+              "ToolTip": "C:\\Users\\AGANETHED\\Desktop\\TaskManagerSolution_1.0\\TaskManager.Infrastructure\\Services\\IDataService.cs",
+              "RelativeToolTip": "TaskManager.Infrastructure\\Services\\IDataService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T19:36:04.511Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "App.config",
+              "DocumentMoniker": "C:\\Users\\AGANETHED\\Desktop\\TaskManagerSolution_1.0\\TaskManager.Infrastructure\\App.config",
+              "RelativeDocumentMoniker": "TaskManager.Infrastructure\\App.config",
+              "ToolTip": "C:\\Users\\AGANETHED\\Desktop\\TaskManagerSolution_1.0\\TaskManager.Infrastructure\\App.config",
+              "RelativeToolTip": "TaskManager.Infrastructure\\App.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-05-16T19:36:02.512Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SettingsService.cs",
+              "DocumentMoniker": "C:\\Users\\AGANETHED\\Desktop\\TaskManagerSolution_1.0\\TaskManager.Infrastructure\\Services\\SettingsService.cs",
+              "RelativeDocumentMoniker": "TaskManager.Infrastructure\\Services\\SettingsService.cs",
+              "ToolTip": "C:\\Users\\AGANETHED\\Desktop\\TaskManagerSolution_1.0\\TaskManager.Infrastructure\\Services\\SettingsService.cs",
+              "RelativeToolTip": "TaskManager.Infrastructure\\Services\\SettingsService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T19:35:54.21Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "NotificationService.cs",
+              "DocumentMoniker": "C:\\Users\\AGANETHED\\Desktop\\TaskManagerSolution_1.0\\TaskManager.Infrastructure\\Services\\NotificationService.cs",
+              "RelativeDocumentMoniker": "TaskManager.Infrastructure\\Services\\NotificationService.cs",
+              "ToolTip": "C:\\Users\\AGANETHED\\Desktop\\TaskManagerSolution_1.0\\TaskManager.Infrastructure\\Services\\NotificationService.cs",
+              "RelativeToolTip": "TaskManager.Infrastructure\\Services\\NotificationService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T19:35:34.201Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "TagsChangedEvent.cs",
+              "DocumentMoniker": "C:\\Users\\AGANETHED\\Desktop\\TaskManagerSolution_1.0\\TaskManager.Infrastructure\\Events\\TagsChangedEvent.cs",
+              "RelativeDocumentMoniker": "TaskManager.Infrastructure\\Events\\TagsChangedEvent.cs",
+              "ToolTip": "C:\\Users\\AGANETHED\\Desktop\\TaskManagerSolution_1.0\\TaskManager.Infrastructure\\Events\\TagsChangedEvent.cs",
+              "RelativeToolTip": "TaskManager.Infrastructure\\Events\\TagsChangedEvent.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T19:34:53.516Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "TaskChangedEvent.cs",
+              "DocumentMoniker": "C:\\Users\\AGANETHED\\Desktop\\TaskManagerSolution_1.0\\TaskManager.Infrastructure\\Events\\TaskChangedEvent.cs",
+              "RelativeDocumentMoniker": "TaskManager.Infrastructure\\Events\\TaskChangedEvent.cs",
+              "ToolTip": "C:\\Users\\AGANETHED\\Desktop\\TaskManagerSolution_1.0\\TaskManager.Infrastructure\\Events\\TaskChangedEvent.cs",
+              "RelativeToolTip": "TaskManager.Infrastructure\\Events\\TaskChangedEvent.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T19:34:01.977Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "TaskDeletedEvent.cs",
+              "DocumentMoniker": "C:\\Users\\AGANETHED\\Desktop\\TaskManagerSolution_1.0\\TaskManager.Infrastructure\\Events\\TaskDeletedEvent.cs",
+              "RelativeDocumentMoniker": "TaskManager.Infrastructure\\Events\\TaskDeletedEvent.cs",
+              "ToolTip": "C:\\Users\\AGANETHED\\Desktop\\TaskManagerSolution_1.0\\TaskManager.Infrastructure\\Events\\TaskDeletedEvent.cs",
+              "RelativeToolTip": "TaskManager.Infrastructure\\Events\\TaskDeletedEvent.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T19:13:49.871Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "TaskConverters.cs",
+              "DocumentMoniker": "C:\\Users\\AGANETHED\\Desktop\\TaskManagerSolution_1.0\\TaskManager.Infrastructure\\Converters\\TaskConverters.cs",
+              "RelativeDocumentMoniker": "TaskManager.Infrastructure\\Converters\\TaskConverters.cs",
+              "ToolTip": "C:\\Users\\AGANETHED\\Desktop\\TaskManagerSolution_1.0\\TaskManager.Infrastructure\\Converters\\TaskConverters.cs",
+              "RelativeToolTip": "TaskManager.Infrastructure\\Converters\\TaskConverters.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAswD0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T19:33:50.381Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "SelectedTaskToIsSelectedConverter.cs",
+              "DocumentMoniker": "C:\\Users\\AGANETHED\\Desktop\\TaskManagerSolution_1.0\\TaskManager.Infrastructure\\Converters\\SelectedTaskToIsSelectedConverter.cs",
+              "RelativeDocumentMoniker": "TaskManager.Infrastructure\\Converters\\SelectedTaskToIsSelectedConverter.cs",
+              "ToolTip": "C:\\Users\\AGANETHED\\Desktop\\TaskManagerSolution_1.0\\TaskManager.Infrastructure\\Converters\\SelectedTaskToIsSelectedConverter.cs",
+              "RelativeToolTip": "TaskManager.Infrastructure\\Converters\\SelectedTaskToIsSelectedConverter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T19:33:27.816Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "DateHasTaskConverter.cs",
+              "DocumentMoniker": "C:\\Users\\AGANETHED\\Desktop\\TaskManagerSolution_1.0\\TaskManager.Infrastructure\\Converters\\DateHasTaskConverter.cs",
+              "RelativeDocumentMoniker": "TaskManager.Infrastructure\\Converters\\DateHasTaskConverter.cs",
+              "ToolTip": "C:\\Users\\AGANETHED\\Desktop\\TaskManagerSolution_1.0\\TaskManager.Infrastructure\\Converters\\DateHasTaskConverter.cs",
+              "RelativeToolTip": "TaskManager.Infrastructure\\Converters\\DateHasTaskConverter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T19:33:11.8Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ColorToBrushConverter.cs",
+              "DocumentMoniker": "C:\\Users\\AGANETHED\\Desktop\\TaskManagerSolution_1.0\\TaskManager.Infrastructure\\Converters\\ColorToBrushConverter.cs",
+              "RelativeDocumentMoniker": "TaskManager.Infrastructure\\Converters\\ColorToBrushConverter.cs",
+              "ToolTip": "C:\\Users\\AGANETHED\\Desktop\\TaskManagerSolution_1.0\\TaskManager.Infrastructure\\Converters\\ColorToBrushConverter.cs",
+              "RelativeToolTip": "TaskManager.Infrastructure\\Converters\\ColorToBrushConverter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T19:32:54.225Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ListBoxSelectedItemsBehavior.cs",
+              "DocumentMoniker": "C:\\Users\\AGANETHED\\Desktop\\TaskManagerSolution_1.0\\TaskManager.Infrastructure\\Behaviors\\ListBoxSelectedItemsBehavior.cs",
+              "RelativeDocumentMoniker": "TaskManager.Infrastructure\\Behaviors\\ListBoxSelectedItemsBehavior.cs",
+              "ToolTip": "C:\\Users\\AGANETHED\\Desktop\\TaskManagerSolution_1.0\\TaskManager.Infrastructure\\Behaviors\\ListBoxSelectedItemsBehavior.cs",
+              "RelativeToolTip": "TaskManager.Infrastructure\\Behaviors\\ListBoxSelectedItemsBehavior.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADgAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T19:31:57.347Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Settings.settings",
+              "DocumentMoniker": "C:\\Users\\AGANETHED\\Desktop\\TaskManagerSolution_1.0\\TaskManager.Infrastructure\\Properties\\Settings.settings",
+              "RelativeDocumentMoniker": "TaskManager.Infrastructure\\Properties\\Settings.settings",
+              "ToolTip": "C:\\Users\\AGANETHED\\Desktop\\TaskManagerSolution_1.0\\TaskManager.Infrastructure\\Properties\\Settings.settings",
+              "RelativeToolTip": "TaskManager.Infrastructure\\Properties\\Settings.settings",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002767|",
+              "WhenOpened": "2025-05-16T19:31:03.966Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "TaskManager.Infrastructure",
+              "DocumentMoniker": "C:\\Users\\AGANETHED\\Desktop\\TaskManagerSolution_1.0\\TaskManager.Infrastructure\\TaskManager.Infrastructure.csproj",
+              "RelativeDocumentMoniker": "TaskManager.Infrastructure\\TaskManager.Infrastructure.csproj",
+              "ToolTip": "C:\\Users\\AGANETHED\\Desktop\\TaskManagerSolution_1.0\\TaskManager.Infrastructure\\TaskManager.Infrastructure.csproj",
+              "RelativeToolTip": "TaskManager.Infrastructure\\TaskManager.Infrastructure.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-05-16T19:29:44.764Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "Tasks.cs",
               "DocumentMoniker": "C:\\Users\\AGANETHED\\Desktop\\TaskManagerSolution_1.0\\TaskManager.Core\\Models\\Tasks.cs",
               "RelativeDocumentMoniker": "TaskManager.Core\\Models\\Tasks.cs",
               "ToolTip": "C:\\Users\\AGANETHED\\Desktop\\TaskManagerSolution_1.0\\TaskManager.Core\\Models\\Tasks.cs",
               "RelativeToolTip": "TaskManager.Core\\Models\\Tasks.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAA6AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-16T19:26:19.721Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 15,
               "Title": "Tags.cs",
               "DocumentMoniker": "C:\\Users\\AGANETHED\\Desktop\\TaskManagerSolution_1.0\\TaskManager.Core\\Models\\Tags.cs",
               "RelativeDocumentMoniker": "TaskManager.Core\\Models\\Tags.cs",
@@ -96,7 +329,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 16,
               "Title": "TasksStatus.cs",
               "DocumentMoniker": "C:\\Users\\AGANETHED\\Desktop\\TaskManagerSolution_1.0\\TaskManager.Core\\Enums\\TasksStatus.cs",
               "RelativeDocumentMoniker": "TaskManager.Core\\Enums\\TasksStatus.cs",
@@ -109,7 +342,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 17,
               "Title": "TagColor.cs",
               "DocumentMoniker": "C:\\Users\\AGANETHED\\Desktop\\TaskManagerSolution_1.0\\TaskManager.Core\\Enums\\TagColor.cs",
               "RelativeDocumentMoniker": "TaskManager.Core\\Enums\\TagColor.cs",
@@ -122,7 +355,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 18,
               "Title": "RepeatInterval.cs",
               "DocumentMoniker": "C:\\Users\\AGANETHED\\Desktop\\TaskManagerSolution_1.0\\TaskManager.Core\\Enums\\RepeatInterval.cs",
               "RelativeDocumentMoniker": "TaskManager.Core\\Enums\\RepeatInterval.cs",
@@ -135,7 +368,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 19,
               "Title": "Priority.cs",
               "DocumentMoniker": "C:\\Users\\AGANETHED\\Desktop\\TaskManagerSolution_1.0\\TaskManager.Core\\Enums\\Priority.cs",
               "RelativeDocumentMoniker": "TaskManager.Core\\Enums\\Priority.cs",
@@ -148,7 +381,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 21,
               "Title": "CalendarViewModel.cs",
               "DocumentMoniker": "C:\\Users\\AGANETHED\\Desktop\\TaskManagerSolution_1.0\\TaskManager.Calendar\\ViewModels\\CalendarViewModel.cs",
               "RelativeDocumentMoniker": "TaskManager.Calendar\\ViewModels\\CalendarViewModel.cs",
@@ -161,7 +394,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 20,
               "Title": "CalendarModule.cs",
               "DocumentMoniker": "C:\\Users\\AGANETHED\\Desktop\\TaskManagerSolution_1.0\\TaskManager.Calendar\\CalendarModule.cs",
               "RelativeDocumentMoniker": "TaskManager.Calendar\\CalendarModule.cs",
@@ -174,7 +407,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 22,
               "Title": "CalendarView.xaml.cs",
               "DocumentMoniker": "C:\\Users\\AGANETHED\\Desktop\\TaskManagerSolution_1.0\\TaskManager.Calendar\\View\\CalendarView.xaml.cs",
               "RelativeDocumentMoniker": "TaskManager.Calendar\\View\\CalendarView.xaml.cs",
@@ -182,35 +415,25 @@
               "RelativeToolTip": "TaskManager.Calendar\\View\\CalendarView.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-16T19:06:39.455Z"
+              "WhenOpened": "2025-05-16T19:06:39.455Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "TaskDeletedEvent.cs",
-              "DocumentMoniker": "C:\\Users\\AGANETHED\\Desktop\\TaskManagerSolution_1.0\\TaskManager.Infrastructure\\Events\\TaskDeletedEvent.cs",
-              "RelativeDocumentMoniker": "TaskManager.Infrastructure\\Events\\TaskDeletedEvent.cs",
-              "ToolTip": "C:\\Users\\AGANETHED\\Desktop\\TaskManagerSolution_1.0\\TaskManager.Infrastructure\\Events\\TaskDeletedEvent.cs",
-              "RelativeToolTip": "TaskManager.Infrastructure\\Events\\TaskDeletedEvent.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-16T19:13:49.871Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 23,
               "Title": "JsonDataService.cs",
               "DocumentMoniker": "C:\\Users\\AGANETHED\\Desktop\\TaskManagerSolution_1.0\\TaskManager.Infrastructure\\Services\\JsonDataService.cs",
               "RelativeDocumentMoniker": "TaskManager.Infrastructure\\Services\\JsonDataService.cs",
               "ToolTip": "C:\\Users\\AGANETHED\\Desktop\\TaskManagerSolution_1.0\\TaskManager.Infrastructure\\Services\\JsonDataService.cs",
               "RelativeToolTip": "TaskManager.Infrastructure\\Services\\JsonDataService.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAIBJwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-16T19:14:04.966Z"
+              "WhenOpened": "2025-05-16T19:14:04.966Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 24,
               "Title": "ISettingsService.cs",
               "DocumentMoniker": "C:\\Users\\AGANETHED\\Desktop\\TaskManagerSolution_1.0\\TaskManager.Infrastructure\\Services\\ISettingsService.cs",
               "RelativeDocumentMoniker": "TaskManager.Infrastructure\\Services\\ISettingsService.cs",
@@ -218,11 +441,12 @@
               "RelativeToolTip": "TaskManager.Infrastructure\\Services\\ISettingsService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-16T19:08:50.988Z"
+              "WhenOpened": "2025-05-16T19:08:50.988Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 25,
               "Title": "INotificationService.cs",
               "DocumentMoniker": "C:\\Users\\AGANETHED\\Desktop\\TaskManagerSolution_1.0\\TaskManager.Infrastructure\\Services\\INotificationService.cs",
               "RelativeDocumentMoniker": "TaskManager.Infrastructure\\Services\\INotificationService.cs",
@@ -230,18 +454,20 @@
               "RelativeToolTip": "TaskManager.Infrastructure\\Services\\INotificationService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-16T19:08:31.026Z"
+              "WhenOpened": "2025-05-16T19:08:31.026Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 26,
               "Title": "CalendarView.xaml",
               "DocumentMoniker": "C:\\Users\\AGANETHED\\Desktop\\TaskManagerSolution_1.0\\TaskManager.Calendar\\View\\CalendarView.xaml",
               "RelativeDocumentMoniker": "TaskManager.Calendar\\View\\CalendarView.xaml",
               "ToolTip": "C:\\Users\\AGANETHED\\Desktop\\TaskManagerSolution_1.0\\TaskManager.Calendar\\View\\CalendarView.xaml",
               "RelativeToolTip": "TaskManager.Calendar\\View\\CalendarView.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-16T19:06:42.209Z"
+              "WhenOpened": "2025-05-16T19:06:42.209Z",
+              "EditorCaption": ""
             }
           ]
         }
