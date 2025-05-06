@@ -3,6 +3,30 @@
   "WorkspaceRootPath": "C:\\Users\\AGANETHED\\Desktop\\TaskManagerSolution_1.0\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{44E5280C-B198-4107-B25C-49F0A1FF9030}|TaskManager.Shell\\TaskManager.Shell.csproj|c:\\users\\aganethed\\desktop\\taskmanagersolution_1.0\\taskmanager.shell\\bootstrapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44E5280C-B198-4107-B25C-49F0A1FF9030}|TaskManager.Shell\\TaskManager.Shell.csproj|solutionrelative:taskmanager.shell\\bootstrapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44E5280C-B198-4107-B25C-49F0A1FF9030}|TaskManager.Shell\\TaskManager.Shell.csproj|c:\\users\\aganethed\\desktop\\taskmanagersolution_1.0\\taskmanager.shell\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44E5280C-B198-4107-B25C-49F0A1FF9030}|TaskManager.Shell\\TaskManager.Shell.csproj|solutionrelative:taskmanager.shell\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44E5280C-B198-4107-B25C-49F0A1FF9030}|TaskManager.Shell\\TaskManager.Shell.csproj|c:\\users\\aganethed\\desktop\\taskmanagersolution_1.0\\taskmanager.shell\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44E5280C-B198-4107-B25C-49F0A1FF9030}|TaskManager.Shell\\TaskManager.Shell.csproj|solutionrelative:taskmanager.shell\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44E5280C-B198-4107-B25C-49F0A1FF9030}|TaskManager.Shell\\TaskManager.Shell.csproj|c:\\users\\aganethed\\desktop\\taskmanagersolution_1.0\\taskmanager.shell\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{44E5280C-B198-4107-B25C-49F0A1FF9030}|TaskManager.Shell\\TaskManager.Shell.csproj|solutionrelative:taskmanager.shell\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44E5280C-B198-4107-B25C-49F0A1FF9030}|TaskManager.Shell\\TaskManager.Shell.csproj|c:\\users\\aganethed\\desktop\\taskmanagersolution_1.0\\taskmanager.shell\\views\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44E5280C-B198-4107-B25C-49F0A1FF9030}|TaskManager.Shell\\TaskManager.Shell.csproj|solutionrelative:taskmanager.shell\\views\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44E5280C-B198-4107-B25C-49F0A1FF9030}|TaskManager.Shell\\TaskManager.Shell.csproj|c:\\users\\aganethed\\desktop\\taskmanagersolution_1.0\\taskmanager.shell\\viewmodels\\mainwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44E5280C-B198-4107-B25C-49F0A1FF9030}|TaskManager.Shell\\TaskManager.Shell.csproj|solutionrelative:taskmanager.shell\\viewmodels\\mainwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{B557A152-68A1-4400-A35C-6E2D042EB9EB}|TaskManager.SettingsModule\\TaskManager.SettingsModule.csproj|c:\\users\\aganethed\\desktop\\taskmanagersolution_1.0\\taskmanager.settingsmodule\\settingsmodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B557A152-68A1-4400-A35C-6E2D042EB9EB}|TaskManager.SettingsModule\\TaskManager.SettingsModule.csproj|solutionrelative:taskmanager.settingsmodule\\settingsmodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -134,11 +158,88 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\AGANETHED\\Desktop\\TaskManagerSolution_1.0\\TaskManager.Shell\\App.xaml.cs",
+              "RelativeDocumentMoniker": "TaskManager.Shell\\App.xaml.cs",
+              "ToolTip": "C:\\Users\\AGANETHED\\Desktop\\TaskManagerSolution_1.0\\TaskManager.Shell\\App.xaml.cs",
+              "RelativeToolTip": "TaskManager.Shell\\App.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T19:44:33.985Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Bootstrapper.cs",
+              "DocumentMoniker": "C:\\Users\\AGANETHED\\Desktop\\TaskManagerSolution_1.0\\TaskManager.Shell\\Bootstrapper.cs",
+              "RelativeDocumentMoniker": "TaskManager.Shell\\Bootstrapper.cs",
+              "ToolTip": "C:\\Users\\AGANETHED\\Desktop\\TaskManagerSolution_1.0\\TaskManager.Shell\\Bootstrapper.cs",
+              "RelativeToolTip": "TaskManager.Shell\\Bootstrapper.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAADwvxsAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T19:44:08.497Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AssemblyInfo.cs",
+              "DocumentMoniker": "C:\\Users\\AGANETHED\\Desktop\\TaskManagerSolution_1.0\\TaskManager.Shell\\AssemblyInfo.cs",
+              "RelativeDocumentMoniker": "TaskManager.Shell\\AssemblyInfo.cs",
+              "ToolTip": "C:\\Users\\AGANETHED\\Desktop\\TaskManagerSolution_1.0\\TaskManager.Shell\\AssemblyInfo.cs",
+              "RelativeToolTip": "TaskManager.Shell\\AssemblyInfo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T19:44:07.688Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Users\\AGANETHED\\Desktop\\TaskManagerSolution_1.0\\TaskManager.Shell\\App.xaml",
+              "RelativeDocumentMoniker": "TaskManager.Shell\\App.xaml",
+              "ToolTip": "C:\\Users\\AGANETHED\\Desktop\\TaskManagerSolution_1.0\\TaskManager.Shell\\App.xaml",
+              "RelativeToolTip": "TaskManager.Shell\\App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-16T19:44:04.836Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\AGANETHED\\Desktop\\TaskManagerSolution_1.0\\TaskManager.Shell\\Views\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "TaskManager.Shell\\Views\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\AGANETHED\\Desktop\\TaskManagerSolution_1.0\\TaskManager.Shell\\Views\\MainWindow.xaml.cs",
+              "RelativeToolTip": "TaskManager.Shell\\Views\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T19:43:58.152Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MainWindowViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\AGANETHED\\Desktop\\TaskManagerSolution_1.0\\TaskManager.Shell\\ViewModels\\MainWindowViewModel.cs",
+              "RelativeDocumentMoniker": "TaskManager.Shell\\ViewModels\\MainWindowViewModel.cs",
+              "ToolTip": "C:\\Users\\AGANETHED\\Desktop\\TaskManagerSolution_1.0\\TaskManager.Shell\\ViewModels\\MainWindowViewModel.cs",
+              "RelativeToolTip": "TaskManager.Shell\\ViewModels\\MainWindowViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T19:43:46.776Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "SettingsModule.cs",
               "DocumentMoniker": "C:\\Users\\AGANETHED\\Desktop\\TaskManagerSolution_1.0\\TaskManager.SettingsModule\\SettingsModule.cs",
               "RelativeDocumentMoniker": "TaskManager.SettingsModule\\SettingsModule.cs",
@@ -151,7 +252,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 7,
               "Title": "SettingsViewModel.cs",
               "DocumentMoniker": "C:\\Users\\AGANETHED\\Desktop\\TaskManagerSolution_1.0\\TaskManager.SettingsModule\\ViewModels\\SettingsViewModel.cs",
               "RelativeDocumentMoniker": "TaskManager.SettingsModule\\ViewModels\\SettingsViewModel.cs",
@@ -159,24 +260,22 @@
               "RelativeToolTip": "TaskManager.SettingsModule\\ViewModels\\SettingsViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-16T19:39:40.966Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-16T19:39:40.966Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 8,
               "Title": "SettingsView.xaml",
               "DocumentMoniker": "C:\\Users\\AGANETHED\\Desktop\\TaskManagerSolution_1.0\\TaskManager.SettingsModule\\View\\SettingsView.xaml",
               "RelativeDocumentMoniker": "TaskManager.SettingsModule\\View\\SettingsView.xaml",
               "ToolTip": "C:\\Users\\AGANETHED\\Desktop\\TaskManagerSolution_1.0\\TaskManager.SettingsModule\\View\\SettingsView.xaml",
               "RelativeToolTip": "TaskManager.SettingsModule\\View\\SettingsView.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-16T19:39:00.595Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-16T19:39:00.595Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 9,
               "Title": "SettingsView.xaml.cs",
               "DocumentMoniker": "C:\\Users\\AGANETHED\\Desktop\\TaskManagerSolution_1.0\\TaskManager.SettingsModule\\View\\SettingsView.xaml.cs",
               "RelativeDocumentMoniker": "TaskManager.SettingsModule\\View\\SettingsView.xaml.cs",
@@ -184,12 +283,11 @@
               "RelativeToolTip": "TaskManager.SettingsModule\\View\\SettingsView.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-16T19:38:54.678Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-16T19:38:54.678Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 10,
               "Title": "IDataService.cs",
               "DocumentMoniker": "C:\\Users\\AGANETHED\\Desktop\\TaskManagerSolution_1.0\\TaskManager.Infrastructure\\Services\\IDataService.cs",
               "RelativeDocumentMoniker": "TaskManager.Infrastructure\\Services\\IDataService.cs",
@@ -197,12 +295,11 @@
               "RelativeToolTip": "TaskManager.Infrastructure\\Services\\IDataService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-16T19:36:04.511Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-16T19:36:04.511Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 11,
               "Title": "App.config",
               "DocumentMoniker": "C:\\Users\\AGANETHED\\Desktop\\TaskManagerSolution_1.0\\TaskManager.Infrastructure\\App.config",
               "RelativeDocumentMoniker": "TaskManager.Infrastructure\\App.config",
@@ -214,7 +311,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 12,
               "Title": "SettingsService.cs",
               "DocumentMoniker": "C:\\Users\\AGANETHED\\Desktop\\TaskManagerSolution_1.0\\TaskManager.Infrastructure\\Services\\SettingsService.cs",
               "RelativeDocumentMoniker": "TaskManager.Infrastructure\\Services\\SettingsService.cs",
@@ -226,7 +323,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 13,
               "Title": "NotificationService.cs",
               "DocumentMoniker": "C:\\Users\\AGANETHED\\Desktop\\TaskManagerSolution_1.0\\TaskManager.Infrastructure\\Services\\NotificationService.cs",
               "RelativeDocumentMoniker": "TaskManager.Infrastructure\\Services\\NotificationService.cs",
@@ -238,7 +335,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 15,
               "Title": "TagsChangedEvent.cs",
               "DocumentMoniker": "C:\\Users\\AGANETHED\\Desktop\\TaskManagerSolution_1.0\\TaskManager.Infrastructure\\Events\\TagsChangedEvent.cs",
               "RelativeDocumentMoniker": "TaskManager.Infrastructure\\Events\\TagsChangedEvent.cs",
@@ -250,7 +347,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 16,
               "Title": "TaskChangedEvent.cs",
               "DocumentMoniker": "C:\\Users\\AGANETHED\\Desktop\\TaskManagerSolution_1.0\\TaskManager.Infrastructure\\Events\\TaskChangedEvent.cs",
               "RelativeDocumentMoniker": "TaskManager.Infrastructure\\Events\\TaskChangedEvent.cs",
@@ -262,7 +359,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 14,
               "Title": "TaskDeletedEvent.cs",
               "DocumentMoniker": "C:\\Users\\AGANETHED\\Desktop\\TaskManagerSolution_1.0\\TaskManager.Infrastructure\\Events\\TaskDeletedEvent.cs",
               "RelativeDocumentMoniker": "TaskManager.Infrastructure\\Events\\TaskDeletedEvent.cs",
@@ -274,7 +371,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 17,
               "Title": "TaskConverters.cs",
               "DocumentMoniker": "C:\\Users\\AGANETHED\\Desktop\\TaskManagerSolution_1.0\\TaskManager.Infrastructure\\Converters\\TaskConverters.cs",
               "RelativeDocumentMoniker": "TaskManager.Infrastructure\\Converters\\TaskConverters.cs",
@@ -286,7 +383,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 18,
               "Title": "SelectedTaskToIsSelectedConverter.cs",
               "DocumentMoniker": "C:\\Users\\AGANETHED\\Desktop\\TaskManagerSolution_1.0\\TaskManager.Infrastructure\\Converters\\SelectedTaskToIsSelectedConverter.cs",
               "RelativeDocumentMoniker": "TaskManager.Infrastructure\\Converters\\SelectedTaskToIsSelectedConverter.cs",
@@ -298,7 +395,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 19,
               "Title": "DateHasTaskConverter.cs",
               "DocumentMoniker": "C:\\Users\\AGANETHED\\Desktop\\TaskManagerSolution_1.0\\TaskManager.Infrastructure\\Converters\\DateHasTaskConverter.cs",
               "RelativeDocumentMoniker": "TaskManager.Infrastructure\\Converters\\DateHasTaskConverter.cs",
@@ -310,7 +407,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 20,
               "Title": "ColorToBrushConverter.cs",
               "DocumentMoniker": "C:\\Users\\AGANETHED\\Desktop\\TaskManagerSolution_1.0\\TaskManager.Infrastructure\\Converters\\ColorToBrushConverter.cs",
               "RelativeDocumentMoniker": "TaskManager.Infrastructure\\Converters\\ColorToBrushConverter.cs",
@@ -322,7 +419,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 21,
               "Title": "ListBoxSelectedItemsBehavior.cs",
               "DocumentMoniker": "C:\\Users\\AGANETHED\\Desktop\\TaskManagerSolution_1.0\\TaskManager.Infrastructure\\Behaviors\\ListBoxSelectedItemsBehavior.cs",
               "RelativeDocumentMoniker": "TaskManager.Infrastructure\\Behaviors\\ListBoxSelectedItemsBehavior.cs",
@@ -334,7 +431,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 22,
               "Title": "Settings.settings",
               "DocumentMoniker": "C:\\Users\\AGANETHED\\Desktop\\TaskManagerSolution_1.0\\TaskManager.Infrastructure\\Properties\\Settings.settings",
               "RelativeDocumentMoniker": "TaskManager.Infrastructure\\Properties\\Settings.settings",
@@ -345,7 +442,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 23,
               "Title": "TaskManager.Infrastructure.csproj",
               "DocumentMoniker": "C:\\Users\\AGANETHED\\Desktop\\TaskManagerSolution_1.0\\TaskManager.Infrastructure\\TaskManager.Infrastructure.csproj",
               "RelativeDocumentMoniker": "TaskManager.Infrastructure\\TaskManager.Infrastructure.csproj",
@@ -357,7 +454,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 24,
               "Title": "Tasks.cs",
               "DocumentMoniker": "C:\\Users\\AGANETHED\\Desktop\\TaskManagerSolution_1.0\\TaskManager.Core\\Models\\Tasks.cs",
               "RelativeDocumentMoniker": "TaskManager.Core\\Models\\Tasks.cs",
@@ -369,7 +466,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 25,
               "Title": "Tags.cs",
               "DocumentMoniker": "C:\\Users\\AGANETHED\\Desktop\\TaskManagerSolution_1.0\\TaskManager.Core\\Models\\Tags.cs",
               "RelativeDocumentMoniker": "TaskManager.Core\\Models\\Tags.cs",
@@ -381,7 +478,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 26,
               "Title": "TasksStatus.cs",
               "DocumentMoniker": "C:\\Users\\AGANETHED\\Desktop\\TaskManagerSolution_1.0\\TaskManager.Core\\Enums\\TasksStatus.cs",
               "RelativeDocumentMoniker": "TaskManager.Core\\Enums\\TasksStatus.cs",
@@ -393,7 +490,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 27,
               "Title": "TagColor.cs",
               "DocumentMoniker": "C:\\Users\\AGANETHED\\Desktop\\TaskManagerSolution_1.0\\TaskManager.Core\\Enums\\TagColor.cs",
               "RelativeDocumentMoniker": "TaskManager.Core\\Enums\\TagColor.cs",
@@ -405,7 +502,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 28,
               "Title": "RepeatInterval.cs",
               "DocumentMoniker": "C:\\Users\\AGANETHED\\Desktop\\TaskManagerSolution_1.0\\TaskManager.Core\\Enums\\RepeatInterval.cs",
               "RelativeDocumentMoniker": "TaskManager.Core\\Enums\\RepeatInterval.cs",
@@ -417,7 +514,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 29,
               "Title": "Priority.cs",
               "DocumentMoniker": "C:\\Users\\AGANETHED\\Desktop\\TaskManagerSolution_1.0\\TaskManager.Core\\Enums\\Priority.cs",
               "RelativeDocumentMoniker": "TaskManager.Core\\Enums\\Priority.cs",
@@ -429,7 +526,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 31,
               "Title": "CalendarViewModel.cs",
               "DocumentMoniker": "C:\\Users\\AGANETHED\\Desktop\\TaskManagerSolution_1.0\\TaskManager.Calendar\\ViewModels\\CalendarViewModel.cs",
               "RelativeDocumentMoniker": "TaskManager.Calendar\\ViewModels\\CalendarViewModel.cs",
@@ -441,7 +538,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 30,
               "Title": "CalendarModule.cs",
               "DocumentMoniker": "C:\\Users\\AGANETHED\\Desktop\\TaskManagerSolution_1.0\\TaskManager.Calendar\\CalendarModule.cs",
               "RelativeDocumentMoniker": "TaskManager.Calendar\\CalendarModule.cs",
@@ -453,7 +550,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 32,
               "Title": "CalendarView.xaml.cs",
               "DocumentMoniker": "C:\\Users\\AGANETHED\\Desktop\\TaskManagerSolution_1.0\\TaskManager.Calendar\\View\\CalendarView.xaml.cs",
               "RelativeDocumentMoniker": "TaskManager.Calendar\\View\\CalendarView.xaml.cs",
@@ -465,7 +562,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 33,
               "Title": "JsonDataService.cs",
               "DocumentMoniker": "C:\\Users\\AGANETHED\\Desktop\\TaskManagerSolution_1.0\\TaskManager.Infrastructure\\Services\\JsonDataService.cs",
               "RelativeDocumentMoniker": "TaskManager.Infrastructure\\Services\\JsonDataService.cs",
@@ -477,7 +574,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 34,
               "Title": "ISettingsService.cs",
               "DocumentMoniker": "C:\\Users\\AGANETHED\\Desktop\\TaskManagerSolution_1.0\\TaskManager.Infrastructure\\Services\\ISettingsService.cs",
               "RelativeDocumentMoniker": "TaskManager.Infrastructure\\Services\\ISettingsService.cs",
@@ -489,7 +586,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 35,
               "Title": "INotificationService.cs",
               "DocumentMoniker": "C:\\Users\\AGANETHED\\Desktop\\TaskManagerSolution_1.0\\TaskManager.Infrastructure\\Services\\INotificationService.cs",
               "RelativeDocumentMoniker": "TaskManager.Infrastructure\\Services\\INotificationService.cs",
@@ -501,7 +598,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 36,
               "Title": "CalendarView.xaml",
               "DocumentMoniker": "C:\\Users\\AGANETHED\\Desktop\\TaskManagerSolution_1.0\\TaskManager.Calendar\\View\\CalendarView.xaml",
               "RelativeDocumentMoniker": "TaskManager.Calendar\\View\\CalendarView.xaml",
