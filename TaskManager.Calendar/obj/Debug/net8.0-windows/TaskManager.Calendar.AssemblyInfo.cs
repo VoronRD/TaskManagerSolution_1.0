@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TaskManager.Calendar")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+40bc089d715ce5a7a80ba796fb7ffd6106af2471")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cfb3f5a7cd13568702b034e65baab97e777d901c")]
 [assembly: System.Reflection.AssemblyProductAttribute("TaskManager.Calendar")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TaskManager.Calendar")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

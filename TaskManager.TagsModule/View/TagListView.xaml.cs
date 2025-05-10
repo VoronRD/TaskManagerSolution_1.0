@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using TaskManager.TagsModule.ViewModels;
 
 namespace TaskManager.TagsModule.View
 {
@@ -22,6 +23,14 @@ namespace TaskManager.TagsModule.View
         public TagListView()
         {
             InitializeComponent();
+        }
+
+        private void ListViewItem_DoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            if (DataContext is TagListViewModel vm && vm.SelectedTag != null)
+            {
+                vm.SelectTagCommand.Execute(vm.SelectedTag);
+            }
         }
     }
 }
