@@ -14,7 +14,6 @@ namespace TaskManager.TasksModule
 
         public void RegisterTypes(IContainerRegistry containerRegistry)
         {
-            // Регистрация View для навигации
             containerRegistry.RegisterForNavigation<TaskListView, TaskListViewModel>("TaskListView");
             containerRegistry.RegisterForNavigation<TaskEditView, TaskEditViewModel>("TaskEditView");
         }

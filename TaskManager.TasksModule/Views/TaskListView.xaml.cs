@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,6 +12,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using TaskManager.Core.Models;
+using TaskManager.TasksModule.ViewModels;
 
 namespace TaskManager.TasksModule.Views
 {
@@ -22,6 +25,15 @@ namespace TaskManager.TasksModule.Views
         public TaskListView()
         {
             InitializeComponent();
+            TagsListBox.SelectionChanged += TagsListBox_SelectionChanged;
+        }
+
+        private void TagsListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (DataContext is TaskListViewModel vm)
+            {
+                vm.SelectedTags = new ObservableCollection<Tags>(TagsListBox.SelectedItems.Cast<Tags>());
+            }
         }
     }
 }
