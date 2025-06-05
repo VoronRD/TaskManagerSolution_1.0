@@ -2,7 +2,7 @@
 
 namespace TaskManager.Infrastructure.Events
 {
-    public class TaskChangedEvent : PubSubEvent<Tasks>
+    public class TaskDeletedEvent : PubSubEvent<Tasks>
     {
     }
 }

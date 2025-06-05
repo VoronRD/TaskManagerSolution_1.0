@@ -1,139 +1,103 @@
-﻿<Window x:Class="TaskManager.TagsModule.View.TagEditView"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:TaskManager.TagsModule.View"
-        mc:Ignorable="d"
-        xmlns:prism="http://prismlibrary.com/"
-        Title="TagEditView" Height="200" Width="250">
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="4*"/>
-            <RowDefinition/>
-        </Grid.RowDefinitions>
+﻿<UserControl x:Class="TaskManager.TagsModule.View.TagEditView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:viewmodels="clr-namespace:TaskManager.TagsModule.ViewModels"
+             xmlns:conv="clr-namespace:TaskManager.Infrastructure.Converters;assembly=TaskManager.Infrastructure"
+             d:DataContext="{d:DesignInstance Type=viewmodels:TagEditViewModel, IsDesignTimeCreatable=True}"
+             mc:Ignorable="d"
+             Background="White">
 
-        <Border Grid.Row="0" Grid.Column="0"
-        Background="White"
-        BorderBrush="LightGray"
-        BorderThickness="1"
-        Padding="10">
-            <StackPanel>
-                <!-- Поле ввода тега с биндингом -->
-                <TextBox Text="{Binding NewTagName, Mode=TwoWay}"
-                 Foreground="Gray"
-                 Margin="0,0,0,10">
-                    <TextBox.Style>
-                        <Style TargetType="TextBox">
-                            <Setter Property="Text" Value="Название тега"/>
-                            <Style.Triggers>
-                                <Trigger Property="IsFocused" Value="True">
-                                    <Setter Property="Foreground" Value="Black"/>
-                                </Trigger>
-                            </Style.Triggers>
-                        </Style>
-                    </TextBox.Style>
-                </TextBox>
+    <UserControl.Resources>
+        <conv:ColorToBrushConverter x:Key="ColorToBrushConverter"/>
 
-                <!-- Палитра цветов -->
-                <ItemsControl>
-                    <ItemsControl.ItemsPanel>
-                        <ItemsPanelTemplate>
-                            <UniformGrid Columns="8" Rows="3"/>
-                        </ItemsPanelTemplate>
-                    </ItemsControl.ItemsPanel>
-                    <ItemsControl.ItemTemplate>
-                        <DataTemplate>
-                            <Border Width="24" 
-                            Height="24"
-                            Margin="2"
-                            CornerRadius="3"
-                            Cursor="Hand"
-                            BorderBrush="LightGray"
-                            BorderThickness="1">
-                                <Border.Background>
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="#F5F5F5"/>
+            <Setter Property="BorderBrush" Value="#DDD"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Foreground" Value="#333"/>
+            <Setter Property="Padding" Value="10,5"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Width" Value="120"/>
+            <Setter Property="Height" Value="35"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#E0E0E0"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
 
-                                    <SolidColorBrush Color="{Binding}"/>
-                                </Border.Background>
-                                <Border.InputBindings>
-                                    <MouseBinding 
-                                Command="{Binding DataContext.SelectColorCommand, 
-                                        RelativeSource={RelativeSource AncestorType=ItemsControl}}"
-                                CommandParameter="{Binding}"
-                                MouseAction="LeftClick"/>
-                                </Border.InputBindings>
-                            </Border>
-                        </DataTemplate>
-                    </ItemsControl.ItemTemplate>
+        <Style x:Key="ColorItemStyle" TargetType="Border">
+            <Setter Property="Width" Value="40"/>
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="Margin" Value="6"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="2"/>
+            <Setter Property="CornerRadius" Value="4"/>
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding IsSelected}" Value="True">
+                    <Setter Property="BorderBrush" Value="#2196F3"/>
+                    <Setter Property="BorderThickness" Value="3"/>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+    </UserControl.Resources>
 
-                    <!-- Список цветов (задаётся вручную) -->
-                    <Color>#FF0000</Color>
-                    <!-- Красный -->
-                    <Color>#00FF00</Color>
-                    <!-- Зелёный -->
-                    <Color>#0000FF</Color>
-                    <!-- Синий -->
-                    <Color>#FFFF00</Color>
-                    <!-- Жёлтый -->
-                    <Color>#FFA500</Color>
-                    <!-- Оранжевый -->
-                    <Color>#800080</Color>
-                    <!-- Фиолетовый -->
-                    <Color>#FFC0CB</Color>
-                    <!-- Розовый -->
-                    <Color>#A52A2A</Color>
-                    <!-- Коричневый -->
+    <Border Padding="20" Background="White" BorderBrush="#DDD" BorderThickness="1" CornerRadius="5">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
 
-                    <Color>#008000</Color>
-                    <!-- Тёмно-зелёный -->
-                    <Color>#000080</Color>
-                    <!-- Тёмно-синий -->
-                    <Color>#808000</Color>
-                    <!-- Оливковый -->
-                    <Color>#800000</Color>
-                    <!-- Тёмно-красный -->
-                    <Color>#008080</Color>
-                    <!-- Бирюзовый -->
-                    <Color>#C0C0C0</Color>
-                    <!-- Серебряный -->
-                    <Color>#808080</Color>
-                    <!-- Серый -->
-                    <Color>#FFFFFF</Color>
-                    <!-- Белый -->
+            <!-- Название -->
+            <TextBlock Grid.Row="0" Text="Введите название тега:"
+                       FontSize="14" FontWeight="Bold" Margin="0,0,0,8"/>
+            <TextBox Grid.Row="1" Text="{Binding NewTagName}" 
+                     Height="32" FontSize="14" Margin="0,0,0,16" 
+                     BorderBrush="#DDD" BorderThickness="1"/>
 
-                    <Color>#E6E6FA</Color>
-                    <!-- Лавандовый -->
-                    <Color>#FFF0F5</Color>
-                    <!-- Розово-лавандовый -->
-                    <Color>#F5F5DC</Color>
-                    <!-- Бежевый -->
-                    <Color>#FAEBD7</Color>
-                    <!-- Античный белый -->
-                    <Color>#FFE4C4</Color>
-                    <!-- Бисквитный -->
-                    <Color>#DEB887</Color>
-                    <!-- Бурённый -->
-                    <Color>#D2B48C</Color>
-                    <!-- Тан -->
-                    <Color>#BC8F8F</Color>
-                    <!-- Розово-коричневый -->
-                </ItemsControl>
+            <!-- Цвета -->
+            <TextBlock Grid.Row="2" Text="Выберите цвет:" 
+                       FontSize="14" FontWeight="Bold" Margin="0,0,0,8"/>
+
+            <ItemsControl Grid.Row="3" ItemsSource="{Binding AvailableColors}" Margin="0,10">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <UniformGrid Columns="5" HorizontalAlignment="Center"/>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Border Style="{StaticResource ColorItemStyle}"
+                    Background="{Binding Color, Converter={StaticResource ColorToBrushConverter}}"
+                    Cursor="Hand">
+                            <Border.InputBindings>
+                                <MouseBinding MouseAction="LeftClick"
+                                  Command="{Binding DataContext.SelectColorCommand,
+                                                    RelativeSource={RelativeSource AncestorType=ItemsControl}}"
+                                  CommandParameter="{Binding}" />
+                            </Border.InputBindings>
+                        </Border>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+
+
+            <!-- Кнопки -->
+            <StackPanel Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,20,0,0">
+                <Button Content="Назад"
+                        Command="{Binding GoBackCommand}"/>
+                <Button Content="Сохранить"
+                        Command="{Binding CreateTagCommand}"
+                        Background="#2196F3"
+                        Foreground="White"/>
             </StackPanel>
-        </Border>
-
-
-
-        <Border Grid.Column="0" Grid.Row="1" Background="#F0F0F0" Grid.RowSpan="2">
-            <UniformGrid Rows="1" Background="#F0F0F0">
-                <Button Content="Создать тег"
-     Command="{Binding CreateTagCommand}"
-     Margin="5" 
-     Height="35"/>
-
-            </UniformGrid>
-
-
-        </Border>
-
-    </Grid>
-</Window>
+        </Grid>
+    </Border>
+</UserControl>

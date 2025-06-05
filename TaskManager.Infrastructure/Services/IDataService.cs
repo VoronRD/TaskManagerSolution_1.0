@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TaskManager.Core.Models;
+﻿using TaskManager.Core.Models;
 
 namespace TaskManager.Infrastructure.Services
 {
@@ -14,5 +9,7 @@ namespace TaskManager.Infrastructure.Services
 
         List<Tags> LoadTags();
         void SaveTags(List<Tags> tags);
+
+        public void SaveOrUpdateTask(Tasks task);
     }
 }

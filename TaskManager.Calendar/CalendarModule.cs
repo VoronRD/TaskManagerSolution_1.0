@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TaskManager.Calendar.View;
+﻿using TaskManager.Calendar.View;
 using TaskManager.Calendar.ViewModels;
 using TaskManager.Infrastructure.Services;
 
@@ -16,9 +11,8 @@ namespace TaskManager.Calendar
             var regionManager = containerProvider.Resolve<IRegionManager>();
             regionManager.RequestNavigate("MainRegion", "CalendarView");
 
-            // Предзагрузка данных
             var dataService = containerProvider.Resolve<IDataService>();
-            dataService.LoadTasks(); // Инициализация данных
+            dataService.LoadTasks();
         }
 
         public void RegisterTypes(IContainerRegistry containerRegistry)

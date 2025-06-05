@@ -1,11 +1,7 @@
-﻿using Prism.Commands;
-using Prism.Mvvm;
-using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
+﻿using System.Collections.ObjectModel;
 using System.Windows.Input;
 using TaskManager.Core.Models;
+using TaskManager.Infrastructure.Events;
 using TaskManager.Infrastructure.Services;
 
 namespace TaskManager.Calendar.ViewModels
@@ -14,9 +10,14 @@ namespace TaskManager.Calendar.ViewModels
     {
         private readonly IRegionManager _regionManager;
         private readonly IDataService _dataService;
+        private readonly INotificationService _notificationService;
+        private readonly ISettingsService _settingsService;
+        private readonly IEventAggregator _eventAggregator;
 
         private DateTime _selectedDate = DateTime.Today;
         private List<Tasks> _allTasks = new();
+
+        public DelegateCommand ShowAllTasksCommand { get; }
 
         public DateTime SelectedDate
         {
@@ -48,24 +49,39 @@ namespace TaskManager.Calendar.ViewModels
 
         public bool HasPlans => DailyPlans?.Any() == true;
 
+        public ObservableCollection<DateTime> DatesWithTasks { get; } = new ObservableCollection<DateTime>();
+
         public ICommand RedactCommand { get; }
         public ICommand OpenSettingsCommand { get; }
 
-        public CalendarViewModel(IRegionManager regionManager, IDataService dataService)
+        public CalendarViewModel(IRegionManager regionManager, IDataService dataService, INotificationService notificationService,
+            ISettingsService settingsService, IEventAggregator eventAggregator)
         {
             _regionManager = regionManager;
             _dataService = dataService;
+            _notificationService = notificationService;
+            _settingsService = settingsService;
+            _eventAggregator = eventAggregator;
+
+            ShowAllTasksCommand = new DelegateCommand(NavigateToAllTasks);
 
             RedactCommand = new DelegateCommand(NavigateToTaskList);
             OpenSettingsCommand = new DelegateCommand(OnOpenSettings);
+
+            _eventAggregator.GetEvent<TaskChangedEvent>().Subscribe(OnTaskUpdated);
+            _eventAggregator.GetEvent<TaskDeletedEvent>().Subscribe(OnTaskDeleted);
 
             LoadAllTasks();
             LoadTasksForDate(SelectedDate);
         }
 
+        private void NavigateToAllTasks()
+        {
+            _regionManager.RequestNavigate("MainRegion", "TaskListView");
+        }
+
         private void NavigateToTaskList()
         {
-            // Переход на TaskListView с передачей выбранной даты
             var parameters = new NavigationParameters
             {
                 { "selectedDate", SelectedDate }
@@ -73,14 +89,34 @@ namespace TaskManager.Calendar.ViewModels
             _regionManager.RequestNavigate("MainRegion", "TaskListView", parameters);
         }
 
-        //private void OnRedact()
-        //{
-        //    System.Diagnostics.Debug.WriteLine("Редактирование задач");
-        //}
+        private void OnTaskUpdated(Tasks updatedTask)
+        {
+            RefreshTasks();
+        }
+
+        private void OnTaskDeleted(Tasks deletedTask)
+        {
+            RefreshTasks();
+        }
+
+        private void RefreshTasks()
+        {
+            _allTasks = _dataService.LoadTasks();
+            UpdateDatesWithTasks();
+            LoadTasksForDate(SelectedDate);
+        }
+
+        private void UpdateDatesWithTasks()
+        {
+            var dates = _allTasks.Select(t => t.Deadline.Date).Distinct().ToList();
+            DatesWithTasks.Clear();
+            foreach (var date in dates)
+                DatesWithTasks.Add(date);
+        }
 
         private void OnOpenSettings()
         {
-            System.Diagnostics.Debug.WriteLine("Открытие настроек");
+            _regionManager.RequestNavigate("MainRegion", "SettingsView");
         }
 
         private bool _isLoading;
@@ -95,7 +131,13 @@ namespace TaskManager.Calendar.ViewModels
             IsLoading = true;
             try
             {
-                await Task.Run(() => _allTasks = _dataService.LoadTasks());
+                await System.Threading.Tasks.Task.Run(() =>
+                {
+                    _allTasks = _dataService.LoadTasks();
+                    UpdateDatesWithTasks();
+                });
+                int days = _settingsService.GetNotificationDays();
+                _notificationService.CheckUpcomingDeadlines(_allTasks, days);
             }
             finally
             {
@@ -106,13 +148,8 @@ namespace TaskManager.Calendar.ViewModels
 
         private void LoadTasksForDate(DateTime date)
         {
-            var tasksForDate = _allTasks
-                .Where(t => t.Deadline.Date == date.Date)
-                .ToList();
-
+            var tasksForDate = _allTasks.Where(t => t.Deadline.Date == date.Date).ToList();
             DailyPlans = new ObservableCollection<Tasks>(tasksForDate);
         }
     }
-
-
 }

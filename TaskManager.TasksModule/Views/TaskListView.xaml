@@ -1,174 +1,253 @@
 ﻿<UserControl x:Class="TaskManager.TasksModule.Views.TaskListView"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:TaskManager.TasksModule.Views"
-        mc:Ignorable="d"
-        xmlns:prism="http://prismlibrary.com/">
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:prism="http://prismlibrary.com/"
+             xmlns:conv="clr-namespace:TaskManager.Infrastructure.Converters;assembly=TaskManager.Infrastructure"
+             xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+             mc:Ignorable="d"
+             Background="White">
 
-    <Grid>
+    <UserControl.Resources>
+        <conv:PriorityToColorConverter x:Key="PriorityToColorConverter" />
+        <conv:StatusToColorConverter x:Key="StatusToColorConverter" />
+        <conv:DeadlineToColorConverter x:Key="DeadlineToColorConverter" />
+        <conv:ColorToBrushConverter x:Key="ColorToBrushConverter" />
+        <conv:SelectedTaskToIsSelectedConverter x:Key="SelectedTaskToIsSelectedConverter" />
+
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="#F5F5F5"/>
+            <Setter Property="BorderBrush" Value="#DDD"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Foreground" Value="#333"/>
+            <Setter Property="Padding" Value="10,5"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Height" Value="35"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#E0E0E0"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style TargetType="TextBox">
+            <Setter Property="BorderBrush" Value="#DDD"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Padding" Value="5"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Height" Value="32"/>
+        </Style>
+
+        <Style TargetType="ComboBox">
+            <Setter Property="BorderBrush" Value="#DDD"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Padding" Value="5"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Height" Value="32"/>
+        </Style>
+
+        <Style TargetType="ListBox">
+            <Setter Property="BorderBrush" Value="#DDD"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Padding" Value="5"/>
+        </Style>
+
+        <Style x:Key="TaskItemStyle" TargetType="Border">
+            <Setter Property="Margin" Value="0,5"/>
+            <Setter Property="Padding" Value="10"/>
+            <Setter Property="Background" Value="#FAFAFA"/>
+            <Setter Property="CornerRadius" Value="5"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="BorderBrush" Value="{Binding Priority, Converter={StaticResource PriorityToColorConverter}}"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Style.Triggers>
+                <DataTrigger Value="True">
+                    <DataTrigger.Binding>
+                        <MultiBinding Converter="{StaticResource SelectedTaskToIsSelectedConverter}">
+                            <Binding Path="DataContext.SelectedTask" RelativeSource="{RelativeSource AncestorType=UserControl}" />
+                            <Binding />
+                        </MultiBinding>
+                    </DataTrigger.Binding>
+                    <Setter Property="BorderBrush" Value="#1565C0"/>
+                    <Setter Property="BorderThickness" Value="2"/>
+                    <Setter Property="Background" Value="#E3F2FD"/>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+    </UserControl.Resources>
+
+    <Grid Margin="10">
         <Grid.RowDefinitions>
-            <RowDefinition Height="4*"/>
-            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-
-
-        <Border Grid.Column="0" Grid.Row="1" Background="#F0F0F0" Grid.RowSpan="2">
-            <UniformGrid Rows="1" Background="#F0F0F0">
-                <Button Content="Создать задачу"
-Command="{Binding CreateTaskCommand}"
-Margin="5" 
-Height="35"/>
-
-                <Button Content="Удалить задачу"
-Command="{Binding DeleteTaskCommand}"
-Margin="5" 
-Height="35"/>
-                <Button Content="Редактировать задачу"
-Command="{Binding EditTaskCommand}"
-Margin="5" 
-Height="35"/>
-
-            </UniformGrid>
-
-
-        </Border>
-
-
-        <Border Grid.Row="0" Grid.Column="0"
-        Background="White"
-        BorderBrush="LightGray"
-        BorderThickness="1"
-        Padding="10">
+        <!-- Фильтры -->
+        <Border Grid.Row="0" Background="#FAFAFA" BorderBrush="#DDD" BorderThickness="1" CornerRadius="5" Padding="15" Margin="0,0,0,10">
             <Grid>
-                <!-- Заглушка при отсутствии задач -->
-                <TextBlock Text="На эту дату пока нет задач"
-                   HorizontalAlignment="Center"
-                   VerticalAlignment="Center"
-                   Foreground="Gray">
-                    <TextBlock.Style>
-                        <Style TargetType="TextBlock">
-                            <Setter Property="Visibility" Value="Visible"/>
-                            <Style.Triggers>
-                                <DataTrigger Binding="{Binding HasPlans}" Value="True">
-                                    <Setter Property="Visibility" Value="Collapsed"/>
-                                </DataTrigger>
-                            </Style.Triggers>
-                        </Style>
-                    </TextBlock.Style>
-                </TextBlock>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
 
-                <!-- Кликабельный список задач -->
-                <ScrollViewer>
-                    <ScrollViewer.Style>
-                        <Style TargetType="ScrollViewer">
-                            <Setter Property="Visibility" Value="Collapsed"/>
-                            <Style.Triggers>
-                                <DataTrigger Binding="{Binding HasPlans}" Value="True">
-                                    <Setter Property="Visibility" Value="Visible"/>
-                                </DataTrigger>
-                            </Style.Triggers>
-                        </Style>
-                    </ScrollViewer.Style>
+                <!-- Поиск -->
+                <StackPanel Grid.Column="0" Grid.Row="0" Margin="0,0,10,10">
+                    <TextBlock Text="Поиск:" Margin="0,0,0,5" FontSize="14"/>
+                    <TextBox Text="{Binding SearchText, UpdateSourceTrigger=PropertyChanged}"/>
+                </StackPanel>
 
-                    <ItemsControl ItemsSource="{Binding DailyPlans}" Margin="5">
-                        <ItemsControl.ItemTemplate>
-                            <DataTemplate>
-                                <Border Margin="0,5" Padding="10" 
-                                Background="#F5F5F5" 
-                                CornerRadius="5"
-                                BorderThickness="1"
-                                BorderBrush="{Binding Priority, Converter={StaticResource PriorityToColorConverter}}"
-                                Cursor="Hand">
-                                    <!-- Обработка клика на всю карточку -->
-                                    <Border.InputBindings>
-                                        <MouseBinding 
-                                    Command="{Binding DataContext.SelectTaskCommand,
-                                            RelativeSource={RelativeSource AncestorType=ItemsControl}}"
-                                    CommandParameter="{Binding}"
-                                    MouseAction="LeftClick"/>
-                                    </Border.InputBindings>
+                <!-- Сортировка -->
+                <StackPanel Grid.Column="1" Grid.Row="0" Margin="5,0,5,10">
+                    <TextBlock Text="Сортировка:" Margin="0,0,0,5" FontSize="14"/>
+                    <ComboBox ItemsSource="{Binding SortOptions}" SelectedItem="{Binding SelectedSort}"/>
+                </StackPanel>
 
-                                    <StackPanel>
-                                        <!-- Заголовок и статус -->
-                                        <DockPanel>
-                                            <TextBlock Text="{Binding Title}" 
-                                               FontWeight="Bold" 
-                                               FontSize="16"
-                                               DockPanel.Dock="Left"/>
-                                            <TextBlock Text="{Binding Status}" 
-                                               Foreground="{Binding Status, Converter={StaticResource StatusToColorConverter}}"
-                                               Margin="10,0,0,0"
-                                               DockPanel.Dock="Right"/>
-                                        </DockPanel>
+                <!-- Статус -->
+                <StackPanel Grid.Column="2" Grid.Row="0" Margin="10,0,0,10">
+                    <TextBlock Text="Статус:" Margin="0,0,0,5" FontSize="14"/>
+                    <ComboBox SelectedItem="{Binding SelectedStatus}">
+                        <ComboBox.ItemsSource>
+                            <x:Array Type="{x:Type sys:String}" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+                                <sys:String>Все</sys:String>
+                                <sys:String>InProgress</sys:String>
+                                <sys:String>Completed</sys:String>
+                                <sys:String>OnHold</sys:String>
+                            </x:Array>
+                        </ComboBox.ItemsSource>
+                    </ComboBox>
+                </StackPanel>
 
-                                        <!-- Описание -->
-                                        <TextBlock Text="{Binding Description}" 
-                                           Margin="0,5"
-                                           TextWrapping="Wrap"/>
+                <!-- Теги -->
+                <StackPanel Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="1" Margin="0,0,0,10">
+                    <TextBlock Text="Теги:" Margin="0,0,0,5" FontSize="14"/>
+                    <ListBox x:Name="TagsListBox"
+                             Height="80"
+                             SelectionMode="Multiple"
+                             ItemsSource="{Binding AllTags}"
+                             DisplayMemberPath="Name">
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="SelectionChanged">
+                                <i:InvokeCommandAction Command="{Binding ApplyFiltersCommand}"/>
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                    </ListBox>
+                </StackPanel>
 
-                                        <!-- Мета-данные -->
-                                        <WrapPanel Margin="0,5">
-                                            <!-- Приоритет -->
-                                            <Border Background="{Binding Priority, Converter={StaticResource PriorityToColorConverter}}"
-                                            CornerRadius="3"
-                                            Padding="3,1"
-                                            Margin="0,0,5,0">
-                                                <TextBlock Text="{Binding Priority}" 
-                                                   Foreground="White"
-                                                   FontSize="10"/>
-                                            </Border>
-
-                                            <!-- Теги -->
-                                            <ItemsControl ItemsSource="{Binding Tags}" 
-                                                 Margin="5,0"
-                                                 VerticalAlignment="Center">
-                                                <ItemsControl.ItemsPanel>
-                                                    <ItemsPanelTemplate>
-                                                        <WrapPanel/>
-                                                    </ItemsPanelTemplate>
-                                                </ItemsControl.ItemsPanel>
-                                                <ItemsControl.ItemTemplate>
-                                                    <DataTemplate>
-                                                        <Border Background="#E1F5FE"
-                                                        CornerRadius="3"
-                                                        Padding="3,1"
-                                                        Margin="0,0,5,0">
-                                                            <TextBlock Text="{Binding}" 
-                                                               Foreground="#0277BD"
-                                                               FontSize="10"/>
-                                                        </Border>
-                                                    </DataTemplate>
-                                                </ItemsControl.ItemTemplate>
-                                            </ItemsControl>
-                                        </WrapPanel>
-
-                                        <!-- Даты -->
-                                        <Grid Margin="0,5">
-                                            <Grid.ColumnDefinitions>
-                                                <ColumnDefinition Width="*"/>
-                                                <ColumnDefinition Width="*"/>
-                                            </Grid.ColumnDefinitions>
-                                            <TextBlock Text="{Binding CreatedDate, StringFormat='Создано: {0:dd.MM.yyyy}'}"
-                                               FontSize="10"
-                                               Foreground="Gray"/>
-                                            <TextBlock Text="{Binding Deadline, StringFormat='Дедлайн: {0:dd.MM.yyyy}'}"
-                                               Grid.Column="1"
-                                               FontSize="10"
-                                               Foreground="{Binding IsDeadlineApproaching, Converter={StaticResource DeadlineToColorConverter}}"
-                                               HorizontalAlignment="Right"/>
-                                        </Grid>
-                                    </StackPanel>
-                                </Border>
-                            </DataTemplate>
-                        </ItemsControl.ItemTemplate>
-                    </ItemsControl>
-                </ScrollViewer>
+                <!-- Кнопки фильтров -->
+                <StackPanel Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right">
+                    <Button Content="Применить" Command="{Binding ApplyFiltersCommand}" Width="120" Margin="0,0,10,0"/>
+                    <Button Content="Сбросить" Command="{Binding ResetFiltersCommand}" Width="120"/>
+                </StackPanel>
             </Grid>
         </Border>
 
+        <!-- Сообщение об отсутствии задач -->
+        <TextBlock Text="На эту дату пока нет задач"
+                   Grid.Row="1"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   Foreground="Gray"
+                   FontSize="16">
+            <TextBlock.Style>
+                <Style TargetType="TextBlock">
+                    <Setter Property="Visibility" Value="Visible"/>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding HasTasks}" Value="True">
+                            <Setter Property="Visibility" Value="Collapsed"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBlock.Style>
+        </TextBlock>
 
+        <!-- Список задач -->
+        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
+            <ItemsControl ItemsSource="{Binding Tasks}" Margin="0,5">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Border Style="{StaticResource TaskItemStyle}">
+                            <Border.InputBindings>
+                                <MouseBinding
+                                    Command="{Binding DataContext.SelectTaskCommand,
+                                                    RelativeSource={RelativeSource AncestorType=ItemsControl}}"
+                                    CommandParameter="{Binding}"
+                                    MouseAction="LeftClick" />
+                            </Border.InputBindings>
+
+                            <StackPanel>
+                                <DockPanel>
+                                    <TextBlock Text="{Binding Title}" FontWeight="Bold" FontSize="16" />
+                                    <TextBlock Text="{Binding Status}" 
+                                               Foreground="{Binding Status, Converter={StaticResource StatusToColorConverter}}"
+                                               Margin="10,0,0,0"
+                                               HorizontalAlignment="Right"/>
+                                </DockPanel>
+
+                                <TextBlock Text="{Binding Description}" Margin="0,5" TextWrapping="Wrap"/>
+
+                                <WrapPanel Margin="0,5">
+                                    <Border Background="{Binding Priority, Converter={StaticResource PriorityToColorConverter}}"
+                                            CornerRadius="3"
+                                            Padding="5,2"
+                                            Margin="0,0,5,0">
+                                        <TextBlock Text="{Binding Priority}" Foreground="White" FontSize="12"/>
+                                    </Border>
+
+                                    <ItemsControl ItemsSource="{Binding Tags}">
+                                        <ItemsControl.ItemsPanel>
+                                            <ItemsPanelTemplate>
+                                                <WrapPanel/>
+                                            </ItemsPanelTemplate>
+                                        </ItemsControl.ItemsPanel>
+                                        <ItemsControl.ItemTemplate>
+                                            <DataTemplate>
+                                                <Border Background="{Binding Color, Converter={StaticResource ColorToBrushConverter}}"
+                                                        CornerRadius="3"
+                                                        Padding="5,2"
+                                                        Margin="0,0,5,0">
+                                                    <TextBlock Text="{Binding Name}" Foreground="White" FontSize="12"/>
+                                                </Border>
+                                            </DataTemplate>
+                                        </ItemsControl.ItemTemplate>
+                                    </ItemsControl>
+                                </WrapPanel>
+
+                                <Grid Margin="0,5">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Text="{Binding CreatedDate, StringFormat='Создано: {0:dd.MM.yyyy}'}"
+                                               FontSize="12"
+                                               Foreground="Gray"/>
+                                    <TextBlock Text="{Binding Deadline, StringFormat='Дедлайн: {0:dd.MM.yyyy}'}"
+                                               Grid.Column="1"
+                                               FontSize="12"
+                                               HorizontalAlignment="Right"
+                                               Foreground="{Binding IsDeadlineApproaching, Converter={StaticResource DeadlineToColorConverter}}"/>
+                                </Grid>
+                            </StackPanel>
+                        </Border>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </ScrollViewer>
+
+        <!-- Кнопки управления -->
+        <UniformGrid Grid.Row="2" Columns="4" Margin="0,10,0,0">
+            <Button Content="Назад" Command="{Binding GoBackCommand}"/>
+            <Button Content="Создать" Command="{Binding CreateTaskCommand}" Background="#4CAF50" Foreground="White"/>
+            <Button Content="Удалить" Command="{Binding DeleteTaskCommand}" Background="#F44336" Foreground="White"/>
+            <Button Content="Редактировать" Command="{Binding EditTaskCommand}" Background="#2196F3" Foreground="White"/>
+        </UniformGrid>
     </Grid>
 </UserControl>

@@ -3,49 +3,131 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:local="clr-namespace:TaskManager.TasksModule.Views"
-             mc:Ignorable="d">
-    <Grid Margin="20">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="Auto"/>
-        </Grid.RowDefinitions>
+             xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+             xmlns:behaviors="clr-namespace:TaskManager.Infrastructure.Behaviors;assembly=TaskManager.Infrastructure"
+             mc:Ignorable="d"
+             Background="White">
 
-        <StackPanel Orientation="Vertical">
-            <TextBlock Text="Название задачи:" FontWeight="Bold"/>
-            <TextBox Text="{Binding Task.Title, UpdateSourceTrigger=PropertyChanged}" />
+    <UserControl.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="Margin" Value="0,0,0,5"/>
+            <Setter Property="FontSize" Value="14"/>
+        </Style>
 
-            <TextBlock Text="Описание:" FontWeight="Bold"/>
-            <TextBox Text="{Binding Task.Description, UpdateSourceTrigger=PropertyChanged}" AcceptsReturn="True" Height="100"/>
+        <Style TargetType="TextBox">
+            <Setter Property="Margin" Value="0,0,0,10"/>
+            <Setter Property="Padding" Value="5"/>
+            <Setter Property="BorderBrush" Value="#DDD"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="FontSize" Value="14"/>
+        </Style>
 
-            <TextBlock Text="Дата создания:" FontWeight="Bold"/>
-            <DatePicker SelectedDate="{Binding Task.CreatedDate, Mode=TwoWay}" />
+        <Style TargetType="ComboBox">
+            <Setter Property="Margin" Value="0,0,0,10"/>
+            <Setter Property="Padding" Value="5"/>
+            <Setter Property="BorderBrush" Value="#DDD"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="FontSize" Value="14"/>
+        </Style>
 
-            <TextBlock Text="Дедлайн:" FontWeight="Bold"/>
-            <DatePicker SelectedDate="{Binding Task.Deadline, Mode=TwoWay}" />
+        <Style TargetType="DatePicker">
+            <Setter Property="Margin" Value="0,0,0,10"/>
+            <Setter Property="Padding" Value="5"/>
+            <Setter Property="BorderBrush" Value="#DDD"/>
+            <Setter Property="FontSize" Value="14"/>
+        </Style>
 
-            <TextBlock Text="Приоритет:" FontWeight="Bold"/>
-            <ComboBox ItemsSource="{Binding Priorities}"
-                      SelectedItem="{Binding Task.Priority, Mode=TwoWay}" />
+        <Style TargetType="ListBox">
+            <Setter Property="Margin" Value="0,0,0,10"/>
+            <Setter Property="BorderBrush" Value="#DDD"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Height" Value="100"/>
+        </Style>
 
-            <TextBlock Text="Статус:" FontWeight="Bold"/>
-            <ComboBox ItemsSource="{Binding Statuses}"
-                      SelectedItem="{Binding Task.Status, Mode=TwoWay}" />
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="#F5F5F5"/>
+            <Setter Property="BorderBrush" Value="#DDD"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Foreground" Value="#333"/>
+            <Setter Property="Padding" Value="10,5"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Width" Value="120"/>
+            <Setter Property="Height" Value="35"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#E0E0E0"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </UserControl.Resources>
 
-            <TextBlock Text="Повторение:" FontWeight="Bold"/>
-            <ComboBox ItemsSource="{Binding RepeatIntervals}" 
-                      SelectedItem="{Binding Task.Repeat, Mode=TwoWay}" />
+    <Border Padding="20" Background="White" BorderBrush="#DDD" BorderThickness="1" CornerRadius="5">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
 
-            <TextBlock Text="Повторять до:" FontWeight="Bold"/>
-            <DatePicker SelectedDate="{Binding Task.RepeatUntil, Mode=TwoWay}" />
-        </StackPanel>
+            <ScrollViewer VerticalScrollBarVisibility="Auto" Padding="5">
+                <StackPanel Orientation="Vertical">
+                    <!-- Название -->
+                    <TextBlock Text="Название задачи:" FontWeight="Bold"/>
+                    <TextBox Text="{Binding Task.Title, UpdateSourceTrigger=PropertyChanged}"/>
 
-        <Button Grid.Row="1"
-                Content="Сохранить"
-                Command="{Binding SaveCommand}"
-                HorizontalAlignment="Right"
-                Margin="0,20,0,0"
-                Width="120"
-                Height="35"/>
-    </Grid>
+                    <!-- Описание -->
+                    <TextBlock Text="Описание:" FontWeight="Bold"/>
+                    <TextBox Text="{Binding Task.Description, UpdateSourceTrigger=PropertyChanged}" 
+                             AcceptsReturn="True" 
+                             Height="100"/>
+
+                    <!-- Дата создания -->
+                    <TextBlock Text="Дата создания:" FontWeight="Bold"/>
+                    <DatePicker SelectedDate="{Binding Task.CreatedDate, Mode=TwoWay}"/>
+
+                    <!-- Дедлайн -->
+                    <TextBlock Text="Дедлайн:" FontWeight="Bold"/>
+                    <DatePicker SelectedDate="{Binding Task.Deadline, Mode=TwoWay}"/>
+
+                    <!-- Приоритет -->
+                    <TextBlock Text="Приоритет:" FontWeight="Bold"/>
+                    <ComboBox ItemsSource="{Binding Priorities}" 
+                              SelectedItem="{Binding Task.Priority, Mode=TwoWay}"/>
+
+                    <!-- Статус -->
+                    <TextBlock Text="Статус:" FontWeight="Bold"/>
+                    <ComboBox ItemsSource="{Binding Statuses}" 
+                              SelectedItem="{Binding Task.Status, Mode=TwoWay}"/>
+
+                    <!-- Повторение -->
+                    <TextBlock Text="Повторение:" FontWeight="Bold"/>
+                    <ComboBox ItemsSource="{Binding RepeatIntervals}" 
+                              SelectedItem="{Binding Task.Repeat, Mode=TwoWay}"/>
+
+                    <!-- Повторять до -->
+                    <TextBlock Text="Повторять до:" FontWeight="Bold"/>
+                    <DatePicker SelectedDate="{Binding Task.RepeatUntil, Mode=TwoWay}"/>
+
+                    <!-- Выбор тегов -->
+                    <TextBlock Text="Теги:" FontWeight="Bold" Margin="0,10,0,5"/>
+                    <ListBox ItemsSource="{Binding AllTags}"
+                             SelectionMode="Multiple"
+                             DisplayMemberPath="Name">
+                        <i:Interaction.Behaviors>
+                            <behaviors:ListBoxSelectedItemsBehavior SelectedItems="{Binding SelectedTags, Mode=TwoWay}" />
+                        </i:Interaction.Behaviors>
+                    </ListBox>
+                </StackPanel>
+            </ScrollViewer>
+
+            <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,20,0,0">
+                <Button Content="Назад"
+                        Command="{Binding GoBackCommand}"/>
+                <Button Content="Сохранить"
+                        Command="{Binding SaveCommand}"
+                        Background="#2196F3"
+                        Foreground="White"/>
+            </StackPanel>
+        </Grid>
+    </Border>
 </UserControl>

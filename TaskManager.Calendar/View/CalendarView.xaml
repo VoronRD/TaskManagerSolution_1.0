@@ -8,38 +8,56 @@
         xmlns:prism="http://prismlibrary.com/"
         xmlns:vm="clr-namespace:TaskManager.Calendar.ViewModels"
         d:DataContext="{d:DesignInstance vm:CalendarViewModel}"
-        xmlns:conv="clr-namespace:TaskManager.Calendar.Converters">
+        xmlns:conv="clr-namespace:TaskManager.Infrastructure.Converters;assembly=TaskManager.Infrastructure"
+        Background="White">
 
     <UserControl.Resources>
         <conv:PriorityToColorConverter x:Key="PriorityToColorConverter"/>
         <conv:StatusToColorConverter x:Key="StatusToColorConverter"/>
         <conv:DeadlineToColorConverter x:Key="DeadlineToColorConverter"/>
-    </UserControl.Resources>
-    
-    
+        <conv:ColorToBrushConverter x:Key="ColorToBrushConverter"/>
+        <conv:DateHasTaskConverter x:Key="DateHasTaskConverter" />
 
-    <Grid>
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="#F5F5F5"/>
+            <Setter Property="BorderBrush" Value="#DDD"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Foreground" Value="#333"/>
+            <Setter Property="Padding" Value="10,5"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#E0E0E0"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </UserControl.Resources>
+
+    <Grid Margin="10">
         <Grid.RowDefinitions>
-            <RowDefinition Height="5*"/>
-            <RowDefinition Height="1*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="1*"/>
-            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <!-- Ячейка 0,0 - Область планов -->
+        <!-- Область планов -->
         <Border Grid.Row="0" Grid.Column="0" 
-        Background="White" 
-        BorderBrush="LightGray" 
-        BorderThickness="1" 
-        Margin="5">
+                Background="White" 
+                BorderBrush="#DDD" 
+                BorderThickness="1" 
+                CornerRadius="5"
+                Padding="10">
             <Grid>
                 <!-- Заглушка -->
                 <TextBlock Text="Выберите дату для просмотра планов"
-                   HorizontalAlignment="Center"
-                   VerticalAlignment="Center"
-                   Foreground="Gray">
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center"
+                           Foreground="Gray"
+                           FontSize="16">
                     <TextBlock.Style>
                         <Style TargetType="TextBlock">
                             <Setter Property="Visibility" Value="Visible"/>
@@ -53,7 +71,7 @@
                 </TextBlock>
 
                 <!-- Список планов -->
-                <ScrollViewer>
+                <ScrollViewer VerticalScrollBarVisibility="Auto">
                     <ScrollViewer.Style>
                         <Style TargetType="ScrollViewer">
                             <Setter Property="Visibility" Value="Collapsed"/>
@@ -65,48 +83,47 @@
                         </Style>
                     </ScrollViewer.Style>
 
-                    <ItemsControl ItemsSource="{Binding DailyPlans}" Margin="5">
+                    <ItemsControl ItemsSource="{Binding DailyPlans}" Margin="0,5">
                         <ItemsControl.ItemTemplate>
                             <DataTemplate>
                                 <Border Margin="0,5" Padding="10" 
-                                Background="#F5F5F5" 
-                                CornerRadius="5"
-                                BorderThickness="1"
-                                BorderBrush="{Binding Priority, Converter={StaticResource PriorityToColorConverter}}">
+                                        Background="#FAFAFA" 
+                                        CornerRadius="5"
+                                        BorderThickness="1"
+                                        BorderBrush="{Binding Priority, Converter={StaticResource PriorityToColorConverter}}">
                                     <StackPanel>
                                         <!-- Заголовок и статус -->
                                         <DockPanel>
                                             <TextBlock Text="{Binding Title}" 
-                                               FontWeight="Bold" 
-                                               FontSize="16"
-                                               DockPanel.Dock="Left"/>
+                                                       FontWeight="Bold" 
+                                                       FontSize="16"
+                                                       DockPanel.Dock="Left"/>
                                             <TextBlock Text="{Binding Status}" 
-                                               Foreground="{Binding Status, Converter={StaticResource StatusToColorConverter}}"
-                                               Margin="10,0,0,0"
-                                               DockPanel.Dock="Right"/>
+                                                       Foreground="{Binding Status, Converter={StaticResource StatusToColorConverter}}"
+                                                       Margin="10,0,0,0"
+                                                       DockPanel.Dock="Right"/>
                                         </DockPanel>
 
                                         <!-- Описание -->
                                         <TextBlock Text="{Binding Description}" 
-                                           Margin="0,5"
-                                           TextWrapping="Wrap"/>
+                                                   Margin="0,5"
+                                                   TextWrapping="Wrap"/>
 
                                         <!-- Мета-данные -->
                                         <WrapPanel Margin="0,5">
                                             <!-- Приоритет -->
                                             <Border Background="{Binding Priority, Converter={StaticResource PriorityToColorConverter}}"
-                                            CornerRadius="3"
-                                            Padding="3,1"
-                                            Margin="0,0,5,0">
+                                                    CornerRadius="3"
+                                                    Padding="5,2"
+                                                    Margin="0,0,5,0">
                                                 <TextBlock Text="{Binding Priority}" 
-                                                   Foreground="White"
-                                                   FontSize="10"/>
+                                                           Foreground="White"
+                                                           FontSize="12"/>
                                             </Border>
 
                                             <!-- Теги -->
                                             <ItemsControl ItemsSource="{Binding Tags}" 
-                                                  Margin="5,0"
-                                                  VerticalAlignment="Center">
+                                                          VerticalAlignment="Center">
                                                 <ItemsControl.ItemsPanel>
                                                     <ItemsPanelTemplate>
                                                         <WrapPanel/>
@@ -114,13 +131,13 @@
                                                 </ItemsControl.ItemsPanel>
                                                 <ItemsControl.ItemTemplate>
                                                     <DataTemplate>
-                                                        <Border Background="#E1F5FE"
-                                                        CornerRadius="3"
-                                                        Padding="3,1"
-                                                        Margin="0,0,5,0">
-                                                            <TextBlock Text="{Binding}" 
-                                                               Foreground="#0277BD"
-                                                               FontSize="10"/>
+                                                        <Border Background="{Binding Color, Converter={StaticResource ColorToBrushConverter}}"
+                                                                CornerRadius="3"
+                                                                Padding="5,2"
+                                                                Margin="0,0,5,0">
+                                                            <TextBlock Text="{Binding Name}"  
+                                                                       Foreground="White"
+                                                                       FontSize="12"/>
                                                         </Border>
                                                     </DataTemplate>
                                                 </ItemsControl.ItemTemplate>
@@ -134,13 +151,13 @@
                                                 <ColumnDefinition Width="*"/>
                                             </Grid.ColumnDefinitions>
                                             <TextBlock Text="{Binding CreatedDate, StringFormat='Создано: {0:dd.MM.yyyy}'}"
-                                               FontSize="10"
-                                               Foreground="Gray"/>
+                                                       FontSize="12"
+                                                       Foreground="Gray"/>
                                             <TextBlock Text="{Binding Deadline, StringFormat='Дедлайн: {0:dd.MM.yyyy}'}"
-                                               Grid.Column="1"
-                                               FontSize="10"
-                                               Foreground="{Binding IsDeadlineApproaching, Converter={StaticResource DeadlineToColorConverter}}"
-                                               HorizontalAlignment="Right"/>
+                                                       Grid.Column="1"
+                                                       FontSize="12"
+                                                       Foreground="{Binding IsDeadlineApproaching, Converter={StaticResource DeadlineToColorConverter}}"
+                                                       HorizontalAlignment="Right"/>
                                         </Grid>
                                     </StackPanel>
                                 </Border>
@@ -151,47 +168,87 @@
             </Grid>
         </Border>
 
+        <!-- Календарь -->
+        <Border Grid.Column="1" Grid.Row="0" Grid.RowSpan="2"
+                Background="White" 
+                BorderBrush="#DDD" 
+                BorderThickness="1" 
+                CornerRadius="5"
+                Padding="10"
+                Margin="5">
+            <Calendar SelectedDate="{Binding SelectedDate}"
+                      DisplayDate="{Binding CurrentDate}">
+                <Calendar.Template>
+                    <ControlTemplate TargetType="Calendar">
+                        <Border Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}">
+                            <Viewbox Stretch="Uniform">
+                                <Grid x:Name="PART_Root">
+                                    <CalendarItem x:Name="PART_CalendarItem"/>
+                                </Grid>
+                            </Viewbox>
+                        </Border>
+                    </ControlTemplate>
+                </Calendar.Template>
 
-        <!-- Левая панель с кнопками -->
-        <Border Grid.Column="0" Grid.Row="1" Background="#F0F0F0" Grid.RowSpan="2">
-            <UniformGrid Rows="1" Background="#F0F0F0">
-                <Button Content="Редактировать"
-            Command="{Binding RedactCommand}"
-            Margin="5" 
-            Height="35"/>
+                <Calendar.CalendarDayButtonStyle>
+                    <Style TargetType="CalendarDayButton">
+                        <Setter Property="FontSize" Value="16"/>
+                        <Setter Property="Width" Value="40"/>
+                        <Setter Property="Height" Value="40"/>
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="CalendarDayButton">
+                                    <Grid>
+                                        <Border x:Name="DayBorder"
+                                                Background="{TemplateBinding Background}"
+                                                BorderBrush="#DDD"
+                                                BorderThickness="1"
+                                                CornerRadius="3"
+                                                Margin="2">
+                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                        </Border>
 
-                <Button Content="Настройки"
-            Command="{Binding OpenSettingsCommand}"
-            Margin="5" 
-            Height="35"/>
-            </UniformGrid>
+                                        <!-- Индикатор задач -->
+                                        <Ellipse Width="8" Height="8" Fill="#FF5252"
+                                                 HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,4,4"
+                                                 Visibility="Collapsed" x:Name="TaskIndicator"/>
+                                    </Grid>
+
+                                    <ControlTemplate.Triggers>
+                                        <DataTrigger Value="True">
+                                            <DataTrigger.Binding>
+                                                <MultiBinding Converter="{StaticResource DateHasTaskConverter}">
+                                                    <Binding Path="DataContext.DatesWithTasks" RelativeSource="{RelativeSource AncestorType=Calendar}" />
+                                                    <Binding Path="DataContext" RelativeSource="{RelativeSource Self}" />
+                                                </MultiBinding>
+                                            </DataTrigger.Binding>
+                                            <Setter TargetName="TaskIndicator" Property="Visibility" Value="Visible"/>
+                                        </DataTrigger>
+
+                                        <!-- Подсветка выбранного дня -->
+                                        <Trigger Property="IsSelected" Value="True">
+                                            <Setter TargetName="DayBorder" Property="Background" Value="#E3F2FD"/>
+                                            <Setter Property="Foreground" Value="Black"/>
+                                        </Trigger>
+                                    </ControlTemplate.Triggers>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </Calendar.CalendarDayButtonStyle>
+            </Calendar>
         </Border>
 
-        <!-- Календарь -->
-        <Calendar Grid.Column="1"
-                SelectedDate="{Binding SelectedDate}"
-                DisplayDate="{Binding CurrentDate}" Grid.RowSpan="2">
-            <Calendar.Template>
-                <ControlTemplate TargetType="Calendar">
-                    <Border Background="{TemplateBinding Background}"
-                            BorderBrush="{TemplateBinding BorderBrush}"
-                            BorderThickness="{TemplateBinding BorderThickness}">
-                        <Viewbox Stretch="Uniform">
-                            <Grid x:Name="PART_Root">
-                                <CalendarItem x:Name="PART_CalendarItem"/>
-                            </Grid>
-                        </Viewbox>
-                    </Border>
-                </ControlTemplate>
-            </Calendar.Template>
-
-            <Calendar.CalendarDayButtonStyle>
-                <Style TargetType="CalendarDayButton">
-                    <Setter Property="FontSize" Value="16"/>
-                    <Setter Property="Width" Value="40"/>
-                    <Setter Property="Height" Value="40"/>
-                </Style>
-            </Calendar.CalendarDayButtonStyle>
-        </Calendar>
+        <!-- Нижняя панель с кнопками -->
+        <UniformGrid Grid.Column="0" Grid.Row="1" Columns="3" HorizontalAlignment="Left">
+            <Button Content="Задачи"
+                    Command="{Binding RedactCommand}"/>
+            <Button Content="Настройки"
+                    Command="{Binding OpenSettingsCommand}"/>
+            <Button Content="Все задачи"
+                    Command="{Binding ShowAllTasksCommand}"/>
+        </UniformGrid>
     </Grid>
 </UserControl>

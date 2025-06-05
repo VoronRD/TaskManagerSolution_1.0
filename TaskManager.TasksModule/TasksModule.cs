@@ -1,6 +1,5 @@
 ﻿using TaskManager.TasksModule.ViewModels;
 using TaskManager.TasksModule.Views;
-using TaskManager.Infrastructure.Services;
 
 namespace TaskManager.TasksModule
 {
@@ -14,7 +13,6 @@ namespace TaskManager.TasksModule
 
         public void RegisterTypes(IContainerRegistry containerRegistry)
         {
-            // Регистрация View для навигации
             containerRegistry.RegisterForNavigation<TaskListView, TaskListViewModel>("TaskListView");
             containerRegistry.RegisterForNavigation<TaskEditView, TaskEditViewModel>("TaskEditView");
         }
